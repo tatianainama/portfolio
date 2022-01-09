@@ -5,7 +5,7 @@ jobStatus: Freelance
 jobTitle: Frontend Developer
 from: 2020-03
 to: 2020-10
-tags: ['React', 'PaperJS'] 
+tags: ['React', 'PaperJS']
 ---
 
 Voices of Merseyside is a project for a graduate thesis research that explores the accents, dialects and identities of people of the Merseyside region.

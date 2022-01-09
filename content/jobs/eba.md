@@ -5,7 +5,7 @@ jobTitleStatus: Freelance
 jobTitle: Frontend Developer / Graphic Designer
 from: 2014-06
 to: 2020-10
-tags: ['NextJS', 'React', 'Typescript', 'Adobe Ai/Ps/XD'] 
+tags: ['NextJS', 'React', 'Typescript', 'Adobe Ai/Ps/XD']
 ---
 
 ESPECIFICOS Buenos Aires is a skin care company from Argentina.

@@ -5,7 +5,7 @@ website: https://hexacta.com/
 jobTitle: Fullstack Javascript Developer
 from: 2016-04
 to: 2015-03
-tags: ['AngularJS', 'Ionic', 'Mapbox', 'NodeJS', 'MongoDB'] 
+tags: ['AngularJS', 'Ionic', 'Mapbox', 'NodeJS', 'MongoDB']
 ---
 
 Prescient Traveler is a platform for monitoring and assisting people who are traveling around the world.
