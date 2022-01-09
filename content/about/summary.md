@@ -1,4 +1,6 @@
 ---
+name: Tatiana Inama
+title: JavaScript & TypeScript developer
 github: github.com/tatianainama
 email: tatii.oxo@gmail.com,
 website: tatiana.inama.dev

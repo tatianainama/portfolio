@@ -9,6 +9,8 @@ export type File<T extends FrontMatterData> = {
 }
 
 export type AboutData = {
+  name: string,
+  title: string,
   email: string,
   github: string,
   instagram: string,
