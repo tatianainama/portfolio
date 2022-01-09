@@ -22,7 +22,7 @@ const Home: NextPage<HomeProps> = ({ about, jobs, projects }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
+      <header className={styles.header}>
         <div>
           <h1>
             {about.data.name} <small>{about.data.title}</small>
@@ -30,9 +30,22 @@ const Home: NextPage<HomeProps> = ({ about, jobs, projects }) => {
           <div dangerouslySetInnerHTML={{ __html: about.content }} />
         </div>
       </header>
-      <main className={styles.main}></main>
+      <main className={styles.main}>
+        {jobs.map((job) => (
+          <div key={job.id}>
+            <h2>{job.data.company}</h2>
+          </div>
+        ))}
+        {projects.map((project) => (
+          <div key={project.id}>
+            <h3>{project.data.project}</h3>
+          </div>
+        ))}
+      </main>
 
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>
+        <p>footer</p>
+      </footer>
     </div>
   )
 }

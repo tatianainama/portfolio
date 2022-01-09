@@ -14,7 +14,7 @@ const mkDir = (dir: string[]) => path.join(...dir)
 
 const ABOUT_DIR = mkDir([process.cwd(), 'content', 'about'])
 const JOBS_DIR = mkDir([process.cwd(), 'content', 'jobs'])
-const PROJECTS_DIR = mkDir([process.cwd(), 'content', 'jobs'])
+const PROJECTS_DIR = mkDir([process.cwd(), 'content', 'projects'])
 
 const readFile = (fileName: string, directory: string) => {
   const id = fileName.replace(/\.md$/, '')
@@ -45,7 +45,6 @@ const ascendingOrder = (a: string, b: string) => {
 export const jobsData = getFilesContent<JobData>(JOBS_DIR).sort(
   (fileA, fileB) => ascendingOrder(fileA.data.from, fileB.data.from)
 )
-
 export const projectsData = getFilesContent<ProjectData>(PROJECTS_DIR)
 
 export const aboutData = readFile('summary.md', ABOUT_DIR) as File<AboutData>
