@@ -3,6 +3,7 @@ import { File, AboutData, JobData, ProjectData } from '@/types/index'
 import { jobsData, aboutData, projectsData } from '@/lib/files'
 
 import Head from 'next/head'
+import Card from '@/components/Card'
 import styles from '../styles/Home.module.css'
 
 type HomeProps = {
@@ -23,28 +24,32 @@ const Home: NextPage<HomeProps> = ({ about, jobs, projects }) => {
       </Head>
 
       <header className={styles.header}>
-        <div>
+        <Card>
           <h1>
             {about.data.name} <small>{about.data.title}</small>
           </h1>
           <div dangerouslySetInnerHTML={{ __html: about.content }} />
-        </div>
+        </Card>
       </header>
       <main className={styles.main}>
-        {jobs.map((job) => (
-          <div key={job.id}>
-            <h2>{job.data.company}</h2>
-          </div>
+        {jobs.map(({ id, data, content }) => (
+          <Card key={id}>
+            <h2>{data.company}</h2>
+            <div dangerouslySetInnerHTML={{ __html: content }} />
+          </Card>
         ))}
-        {projects.map((project) => (
-          <div key={project.id}>
-            <h3>{project.data.project}</h3>
-          </div>
+        {projects.map(({ id, data, content }) => (
+          <Card key={id}>
+            <h3>{data.project}</h3>
+            <div dangerouslySetInnerHTML={{ __html: content }}></div>
+          </Card>
         ))}
       </main>
 
       <footer className={styles.footer}>
-        <p>footer</p>
+        <Card>
+          <h5>footer</h5>
+        </Card>
       </footer>
     </div>
   )
