@@ -1,15 +1,26 @@
 .container {
-  @apply max-w-7xl mx-auto my-4 px-4 grid gap-4 items-start md:px-6 md:my-6 md:gap-6 lg:grid-cols-3 lg:gap-8 lg:px-8 lg:my-8;
+  @apply mx-auto flex flex-col bg-white;
+  width: var(--container-width);
+}
+
+@screen lg {
+  .container {
+    @apply my-8 shadow-xl bg-opacity-70 flex-row xl:rounded-3xl;
+    max-height: calc(100vh - 4rem);
+  }
 }
 
 .header {
-  @apply lg:col-span-1 lg:sticky lg:top-8;
+  @apply p-8 lg:py-0;
+  width: var(--hd-width);
 }
 
 .main {
-  @apply lg:col-span-2 space-y-4 md:space-y-6 lg:space-y-8;
+  @apply flex-1 p-8 lg:overflow-y-auto;
 }
 
-.footer {
-  @apply col-span-full;
+.headerContainer {
+
 }
+
+
