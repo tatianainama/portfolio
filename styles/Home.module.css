@@ -15,12 +15,30 @@
   width: var(--hd-width);
 }
 
-.main {
-  @apply flex-1 p-8 lg:overflow-y-auto;
-}
-
 .headerContainer {
 
+}
+
+.main {
+  @apply flex-1 p-8 lg:overflow-y-auto lg:my-8 lg:mr-1;
+  scrollbar-color: transparent transparent;
+}
+
+.main:hover {
+  scrollbar-color: #E2BA363D transparent;
+}
+
+.main::-webkit-scrollbar {
+  @apply w-2;
+}
+
+.main::-webkit-scrollbar-thumb{
+  @apply transition-colors bg-transparent;
+}
+
+.main:hover::-webkit-scrollbar-thumb {
+  @apply rounded-full w-1;
+  background: #E2BA363D;
 }
 
 
