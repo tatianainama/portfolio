@@ -1,28 +1,16 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Layout from '@/components/Layout'
-import { File, JobData, ProjectData } from '@/types/index'
-import { jobsData, projectsData } from '@/lib/files'
+import { AboutData, File } from '@/types/index'
+import { aboutData } from '@/lib/files'
 
 type HomeProps = {
-  jobs: File<JobData>[]
-  projects: File<ProjectData>[]
+  about: File<AboutData>
 }
 
-const Home: NextPage<HomeProps> = ({ jobs, projects }) => {
+const Home: NextPage<HomeProps> = ({ about }) => {
   return (
     <Layout>
-      {jobs.map(({ id, data, content }) => (
-        <div key={id}>
-          <h2>{data.company}</h2>
-          <div dangerouslySetInnerHTML={{ __html: content }} />
-        </div>
-      ))}
-      {projects.map(({ id, data, content }) => (
-        <div key={id}>
-          <h3>{data.project}</h3>
-          <div dangerouslySetInnerHTML={{ __html: content }}></div>
-        </div>
-      ))}
+      <div dangerouslySetInnerHTML={{ __html: about.content }} />
     </Layout>
   )
 }
@@ -30,8 +18,7 @@ const Home: NextPage<HomeProps> = ({ jobs, projects }) => {
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   return {
     props: {
-      jobs: jobsData,
-      projects: projectsData,
+      about: aboutData,
     },
   }
 }
