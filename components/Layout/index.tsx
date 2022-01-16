@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { FC } from 'react'
+import Navigation from '../Navigation'
 import styles from './Layout.module.css'
 
 type Layout = {
@@ -29,6 +30,7 @@ const Layout: FC<Layout> = ({
       </header>
 
       <main className={styles.main}>
+        <Navigation />
         <div className={styles.mainContainer}>{children}</div>
       </main>
     </div>

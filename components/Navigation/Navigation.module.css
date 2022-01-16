@@ -1,0 +1,19 @@
+.navigation ul {
+  @apply flex uppercase font-medium text-xs transition-all whitespace-nowrap;
+}
+
+.navigation a {
+  @apply p-2 inline-block;
+}
+
+.navigation li:first-child a {
+  @apply pl-0;
+}
+
+.navigation a:hover {
+  @apply text-yellow-500;
+}
+
+.navigation a.active {
+  @apply text-yellow-600 font-bold;
+}
