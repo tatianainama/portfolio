@@ -19,15 +19,9 @@
 }
 
 :root {
-  --variable-font: 0px;
   --hd-width: 100%;
   --container-width: 100%;
   --bg-split: calc(var(--hd-width) + (100vw - var(--container-width)) / 2);
-}
-@screen md {
-  :root {
-    --variable-font: calc(2.875 * ((100vw - 48rem) / 64));
-  }
 }
 
 @screen lg {
@@ -78,8 +72,4 @@ h5,
 h6 {
   font-family: 'Lekton', monospace;
   line-height: 1;
-}
-
-h1 {
-  font-size: calc(2.125rem + var(--variable-font));
 }
