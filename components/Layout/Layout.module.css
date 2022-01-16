@@ -24,20 +24,18 @@
 }
 
 .main:hover {
-  scrollbar-color: #E2BA363D transparent;
+  scrollbar-color: #e2ba363d transparent;
 }
 
 .main::-webkit-scrollbar {
   @apply w-2;
 }
 
-.main::-webkit-scrollbar-thumb{
+.main::-webkit-scrollbar-thumb {
   @apply transition-colors bg-transparent;
 }
 
 .main:hover::-webkit-scrollbar-thumb {
   @apply rounded-full w-1;
-  background: #E2BA363D;
+  background: #e2ba363d;
 }
-
-

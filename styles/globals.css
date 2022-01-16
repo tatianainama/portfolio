@@ -7,15 +7,15 @@
   font-weight: 100 900;
   font-display: swap;
   font-style: oblique 0deg 10deg;
-  src: url("../public/fonts/Inter.var.woff2") format("woff2");
-  src: url("../public/fonts/Inter.var.ttf") format("truetype");
+  src: url('../public/fonts/Inter.var.woff2') format('woff2');
+  src: url('../public/fonts/Inter.var.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Lekton';
   font-weight: bold;
-  src: url("../public/fonts/Lekton-Bold.ttf") format("truetype");
-  src: url("../public/fonts/Lekton-Bold.woff") format("woff");
+  src: url('../public/fonts/Lekton-Bold.ttf') format('truetype');
+  src: url('../public/fonts/Lekton-Bold.woff') format('woff');
 }
 
 :root {
@@ -45,9 +45,14 @@
 html,
 body {
   @apply p-0 m-0;
-  background-image: linear-gradient(to right, #FCFBF2, #FCFBF2 var(--bg-split), #FCCF3D var(--bg-split));
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: linear-gradient(
+    to right,
+    #fcfbf2,
+    #fcfbf2 var(--bg-split),
+    #fccf3d var(--bg-split)
+  );
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -65,7 +70,12 @@ p {
   letter-spacing: -0.006em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Lekton', monospace;
   line-height: 1;
 }
