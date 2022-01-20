@@ -1,0 +1,15 @@
+.avatarContainer {
+  @apply flex items-center space-x-4;
+}
+
+.profilePicture {
+  @apply rounded-full;
+}
+
+.avatarTitle {
+  @apply text-2xl leading-none whitespace-nowrap;
+}
+
+.avatarTitle small {
+  @apply block;
+}
