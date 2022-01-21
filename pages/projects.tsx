@@ -13,7 +13,7 @@ const Jobs: NextPage<ProjectsProps> = ({ projects }) => {
     <Layout>
       {projects.map(({ id, data, content }) => (
         <div key={id}>
-          <h3>{data.project}</h3>
+          <h2>{data.project}</h2>
           <div dangerouslySetInnerHTML={{ __html: content }}></div>
         </div>
       ))}

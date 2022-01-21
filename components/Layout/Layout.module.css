@@ -8,8 +8,13 @@
     @apply my-8 shadow-xl bg-opacity-70 flex-row xl:rounded-3xl overflow-hidden;
     max-height: 50rem;
     height: calc(100vh - 4rem);
-    background: linear-gradient(147.82deg, rgba(248, 252, 61, 0.08) 52.82%, rgba(226, 96, 205, 0.08) 82.24%, rgba(204, 0, 255, 0.08) 99.65%),
-linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+    background: linear-gradient(
+        147.82deg,
+        rgba(248, 252, 61, 0.08) 52.82%,
+        rgba(226, 96, 205, 0.08) 82.24%,
+        rgba(204, 0, 255, 0.08) 99.65%
+      ),
+      linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
   }
 }
 
@@ -38,7 +43,7 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
 }
 
 .content {
-  @apply mt-4 lg:overflow-y-auto;
+  @apply mt-4 lg:overflow-y-auto text-zinc-500;
 }
 
 @screen sm {
