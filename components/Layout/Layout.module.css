@@ -5,8 +5,11 @@
 
 @screen lg {
   .container {
-    @apply my-8 shadow-xl bg-opacity-70 flex-row xl:rounded-3xl;
+    @apply my-8 shadow-xl bg-opacity-70 flex-row xl:rounded-3xl overflow-hidden;
+    max-height: 50rem;
     height: calc(100vh - 4rem);
+    background: linear-gradient(147.82deg, rgba(248, 252, 61, 0.08) 52.82%, rgba(226, 96, 205, 0.08) 82.24%, rgba(204, 0, 255, 0.08) 99.65%),
+linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
   }
 }
 
@@ -15,31 +18,47 @@
   width: var(--hd-width);
 }
 
-.headerContainer {
+@screen lg {
+  .header {
+    @apply flex flex-col justify-center bg-white;
+  }
+}
+
+.mainContent,
+.headerContent {
+  @apply lg:mx-4 xl:mx-16;
 }
 
 .main {
   @apply flex-1 p-8 lg:my-8;
 }
 
-.mainContainer {
-  @apply lg:overflow-y-auto h-full;
-  scrollbar-color: transparent transparent;
+.mainContent {
+  @apply lg:overflow-hidden lg:flex lg:flex-col lg:h-full;
 }
 
-.mainContainer:hover {
-  scrollbar-color: #e2ba363d transparent;
+.content {
+  @apply mt-4 lg:overflow-y-auto;
 }
 
-.mainContainer::-webkit-scrollbar {
-  @apply w-2;
-}
+@screen sm {
+  .content {
+    scrollbar-color: transparent transparent;
+  }
+  .content:hover {
+    scrollbar-color: #e2ba363d transparent;
+  }
 
-.mainContainer::-webkit-scrollbar-thumb {
-  @apply transition-colors bg-transparent;
-}
+  .content::-webkit-scrollbar {
+    @apply w-2;
+  }
 
-.mainContainer:hover::-webkit-scrollbar-thumb {
-  @apply rounded-full w-1;
-  background: #e2ba363d;
+  .content::-webkit-scrollbar-thumb {
+    @apply transition-colors bg-transparent;
+  }
+
+  .content:hover::-webkit-scrollbar-thumb {
+    @apply rounded-full w-1;
+    background: #e2ba363d;
+  }
 }

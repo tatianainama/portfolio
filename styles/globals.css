@@ -38,7 +38,7 @@
 
 html,
 body {
-  @apply p-0 m-0;
+  @apply p-0 m-0 lg:h-full lg:flex lg:flex-col lg:justify-center;
   background-image: linear-gradient(
     to right,
     #fcfbf2,

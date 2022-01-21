@@ -23,14 +23,16 @@ const Layout: FC<Layout> = ({
       </Head>
 
       <header className={styles.header}>
-        <div className={styles.headerContainer}>
+        <div className={styles.headerContent}>
           <Avatar />
         </div>
       </header>
 
       <main className={styles.main}>
-        <Navigation />
-        <div className={styles.mainContainer}>{children}</div>
+        <div className={styles.mainContent}>
+          <Navigation />
+          <div className={styles.content}>{children}</div>
+        </div>
       </main>
     </div>
   )
