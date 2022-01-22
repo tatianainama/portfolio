@@ -3,7 +3,7 @@ company: Voices of Merseyside
 website: https://voicesofmerseyside.org/
 jobStatus: Freelance
 jobTitle: Frontend Developer
-from: 2020-03
+from: 2020-04
 to: 2020-10
 tags: ['React', 'PaperJS']
 ---

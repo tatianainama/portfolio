@@ -1,0 +1,20 @@
+.job {
+  @apply py-4 border-b border-gray-200;
+}
+
+.job header {
+  @apply flex flex-col-reverse space-y-reverse space-y-2 sm:flex-row justify-between my-4;
+}
+
+.job h2 {
+  @apply leading-none;
+}
+
+.job h2 small {
+  @apply block;
+}
+
+.jobContent p,
+.jobContent ul {
+  @apply my-2;
+}

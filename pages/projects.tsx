@@ -1,5 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Layout from '@/components/Layout'
+import Project from '@/components/Content/Project'
 import { File, ProjectData } from '@/types/index'
 
 import { projectsData } from '@/lib/files'
@@ -12,10 +13,7 @@ const Jobs: NextPage<ProjectsProps> = ({ projects }) => {
   return (
     <Layout>
       {projects.map(({ id, data, content }) => (
-        <div key={id}>
-          <h2>{data.project}</h2>
-          <div dangerouslySetInnerHTML={{ __html: content }}></div>
-        </div>
+        <Project key={id} data={data} content={content} />
       ))}
     </Layout>
   )
