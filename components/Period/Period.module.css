@@ -1,0 +1,13 @@
+.period {
+  @apply text-xs leading-none font-semibold uppercase inline-block sm:text-right;
+  color: #da9089;
+}
+
+.period span {
+  @apply sm:block whitespace-nowrap;
+}
+
+.period span + span::before {
+  @apply sm:hidden;
+  content: ' - ';
+}
