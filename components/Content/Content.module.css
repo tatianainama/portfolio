@@ -1,5 +1,5 @@
 .job {
-  @apply py-4 border-b border-gray-200;
+  @apply py-4 border-b border-yellow-600 border-opacity-20;
 }
 
 .job header {
@@ -7,7 +7,7 @@
 }
 
 .job h2 {
-  @apply leading-none;
+  @apply leading-tight;
 }
 
 .job h2 small {
@@ -17,4 +17,29 @@
 .jobContent p,
 .jobContent ul {
   @apply my-2;
+}
+
+.job header a:hover {
+  @apply border-b-2 border-dotted border-yellow-600;
+}
+
+.job header a::after {
+  @apply font-sans text-xxs font-bold align-text-top ml-1 text-yellow-600 opacity-30;
+  content: '↗';
+}
+
+.job header a:hover::after {
+  @apply opacity-100;
+}
+
+.tags {
+  @apply flex flex-wrap mt-6;
+}
+
+.tags > li {
+  @apply text-sm font-lekton text-zinc-600;
+}
+
+.tags > li:not(:last-child)::after {
+  content: '·';
 }

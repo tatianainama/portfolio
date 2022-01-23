@@ -4,14 +4,16 @@ import Period from '@/components/Period'
 import styles from './Content.module.css'
 
 const Job: FC<{ content: string; data: JobData }> = ({
-  data: { company, jobTitle, tags, from, to, jobTitleStatus, project },
+  data: { company, website, jobTitle, tags, from, to, jobTitleStatus, project },
   content,
 }) => (
   <div className={styles.job}>
     <header>
       <h2>
         {project && `${project} - `}
-        {company}
+        <a href={website} target="_blank" rel="noreferrer">
+          {company}
+        </a>
         <small>
           {jobTitle}
           {jobTitleStatus && <span> [{jobTitleStatus}]</span>}
@@ -23,6 +25,11 @@ const Job: FC<{ content: string; data: JobData }> = ({
       dangerouslySetInnerHTML={{ __html: content }}
       className={styles.jobContent}
     />
+    <ul className={styles.tags}>
+      {tags.map((tag) => (
+        <li key={tag}>{tag}</li>
+      ))}
+    </ul>
   </div>
 )
 
