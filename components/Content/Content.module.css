@@ -1,34 +1,36 @@
-.job {
+.contentContainer {
   @apply py-4 border-b border-yellow-600 border-opacity-20;
 }
 
-.job header {
+.contentHeader {
   @apply flex flex-col-reverse space-y-reverse space-y-2 sm:flex-row justify-between my-4;
 }
 
-.job h2 {
+.contentHeader h2 {
   @apply leading-tight;
 }
 
-.job h2 small {
+.contentHeader h2 small {
   @apply block;
 }
 
+.projectContent p,
+.projectContent ul,
 .jobContent p,
 .jobContent ul {
   @apply my-2;
 }
 
-.job header a:hover {
+.contentHeader a.externalLink:hover {
   @apply border-b-2 border-dotted border-yellow-600;
 }
 
-.job header a::after {
+.contentHeader a.externalLink::after {
   @apply font-sans text-xxs font-bold align-text-top ml-1 text-yellow-600 opacity-30;
   content: '↗';
 }
 
-.job header a:hover::after {
+.contentHeader a.externalLink:hover::after {
   @apply opacity-100;
 }
 
@@ -42,4 +44,16 @@
 
 .tags > li:not(:last-child)::after {
   content: '·';
+}
+
+.contentHeaderNav {
+  @apply -ml-2;
+}
+
+a.iconLink {
+  @apply p-2 leading-none;
+}
+
+a.iconLink svg {
+  @apply inline-block;
 }

@@ -1,7 +1,7 @@
 ---
 project: Critter Crossing
 github: https://github.com/tatianainama/critter-crossing
-website: cc.inama.dev/
+website: https://cc.inama.dev/
 ---
 
 March 2020, we were all at the beginning of the panini, looking for new hobbies and distractions. What a perfect time to escape to a deserted island and create your own paradise right? well, that was a perfect time for Nintendo to launch Animal Crossing: New Horizons.

@@ -7,11 +7,16 @@ const Job: FC<{ content: string; data: JobData }> = ({
   data: { company, website, jobTitle, tags, from, to, jobTitleStatus, project },
   content,
 }) => (
-  <div className={styles.job}>
-    <header>
+  <div className={styles.contentContainer}>
+    <header className={styles.contentHeader}>
       <h2>
         {project && `${project} - `}
-        <a href={website} target="_blank" rel="noreferrer">
+        <a
+          href={website}
+          target="_blank"
+          rel="noreferrer"
+          className={styles.externalLink}
+        >
           {company}
         </a>
         <small>

@@ -33,3 +33,8 @@ export type ProjectData = {
   github: string
   website?: string
 }
+
+export type Icon = {
+  size?: number
+  className?: string
+}
