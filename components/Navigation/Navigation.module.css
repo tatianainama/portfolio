@@ -1,3 +1,7 @@
+.navigation {
+  @apply sticky top-0 z-10 bg-white lg:static lg:bg-transparent;
+}
+
 .navigation ul {
   @apply flex uppercase font-medium text-xs transition-all whitespace-nowrap;
 }
