@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { FC } from 'react'
 import Navigation from '@/components/Navigation'
-import Avatar from '@/components/Avatar'
+import Profile from '@/components/Profile'
 import styles from './Layout.module.css'
 
 type Layout = {
@@ -24,7 +24,7 @@ const Layout: FC<Layout> = ({
 
       <header className={styles.header}>
         <div className={styles.headerContent}>
-          <Avatar />
+          <Profile />
         </div>
       </header>
 
