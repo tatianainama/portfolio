@@ -1,5 +1,9 @@
 .contentContainer {
-  @apply py-4 border-b border-yellow-600 border-opacity-20;
+  @apply py-4;
+}
+
+.contentContainer:not(:last-child) {
+  @apply border-b border-yellow-600 border-opacity-20;
 }
 
 .contentHeader {
@@ -19,6 +23,11 @@
 .jobContent p,
 .jobContent ul {
   @apply my-2;
+}
+
+.projectContent a,
+.jobContent a {
+  @apply border-b-2 border-new-york-pink border-dotted hover:border-solid hover:text-new-york-pink;
 }
 
 .contentHeader a.externalLink:hover {
@@ -56,4 +65,8 @@ a.iconLink {
 
 a.iconLink svg {
   @apply inline-block;
+}
+
+a.iconLink:hover svg {
+  @apply fill-new-york-pink;
 }

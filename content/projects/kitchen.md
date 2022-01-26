@@ -1,6 +1,6 @@
 ---
 project: Kitchen
-github: github.com/tatianainama/kitchen
+github: https://github.com/tatianainama/kitchen
 ---
 
 Kitchen is my personal online recipe box. I was tired of having all my favorite recipes all over the place, so I created a multi platform tool to organize them.

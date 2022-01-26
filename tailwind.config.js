@@ -22,6 +22,9 @@ module.exports = {
       fontSize: {
         xxs: '0.5rem',
       },
+      colors: {
+        'new-york-pink': '#da9089',
+      },
     },
   },
   plugins: [],

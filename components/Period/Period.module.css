@@ -1,5 +1,5 @@
 .period {
-  @apply text-xs leading-none font-semibold uppercase inline-block sm:text-right;
+  @apply text-xs leading-none font-semibold uppercase inline-block sm:text-right text-new-york-pink;
   color: #da9089;
 }
 

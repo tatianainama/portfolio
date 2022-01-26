@@ -48,6 +48,7 @@
 
 @screen sm {
   .content {
+    @apply pr-2;
     scrollbar-color: transparent transparent;
   }
   .content:hover {
