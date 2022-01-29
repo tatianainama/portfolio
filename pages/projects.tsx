@@ -11,7 +11,7 @@ type ProjectsProps = {
 
 const Jobs: NextPage<ProjectsProps> = ({ projects }) => {
   return (
-    <Layout>
+    <Layout section="projects">
       {projects.map(({ id, data, content }) => (
         <Project key={id} data={data} content={content} />
       ))}
