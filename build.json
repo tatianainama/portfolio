@@ -3,8 +3,8 @@
     {
       "name": "portfolio",
       "dir": ".",
-      "artifacts": ["out/"],
-      "build_mode": "yarn"
+      "artifacts": ["dist/"],
+      "build_mode": "custom"
     }
   ],
   "deployer": "REST"
