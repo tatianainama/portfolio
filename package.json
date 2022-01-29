@@ -3,11 +3,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier --write .",
-    "export": "next export"
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

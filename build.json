@@ -1,0 +1,11 @@
+{
+  "subprojects": [
+    {
+      "name": "portfolio",
+      "dir": ".",
+      "artifacts": ["out/"],
+      "build_mode": "yarn"
+    }
+  ],
+  "deployer": "REST"
+}
