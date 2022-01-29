@@ -1,7 +1,5 @@
 import { FC } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
-import profile from '../../public/images/pf.jpg'
 
 import styles from './Profile.module.css'
 import Github from '../Icon/Github'
@@ -10,9 +8,9 @@ import Globe from '../Icon/Globe'
 
 const Profile: FC = () => (
   <div className={styles.profileContainer}>
-    <Image
+    <img
       className={styles.profilePicture}
-      src={profile}
+      src="/images/pf.jpg"
       alt="Tatiana Inama profile picture"
       width={64}
       height={64}

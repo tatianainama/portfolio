@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "export": "next export"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -16,6 +17,7 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@types/marked": "^4.0.1",
     "@types/node": "17.0.8",
     "@types/react": "17.0.38",
     "autoprefixer": "^10.4.2",
