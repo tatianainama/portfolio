@@ -3,7 +3,7 @@
     {
       "name": "portfolio",
       "dir": ".",
-      "artifacts": ["dist/"],
+      "artifacts": ["out/"],
       "build_mode": "custom"
     }
   ],
