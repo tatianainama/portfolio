@@ -2,6 +2,7 @@ import type { GetStaticProps, NextPage } from 'next'
 import Layout from '@/components/Layout'
 import { AboutData, File } from '@/types/index'
 import { aboutData } from '@/lib/files'
+import About from '@/components/Content/About'
 
 type HomeProps = {
   about: File<AboutData>
@@ -10,7 +11,7 @@ type HomeProps = {
 const Home: NextPage<HomeProps> = ({ about }) => {
   return (
     <Layout>
-      <div dangerouslySetInnerHTML={{ __html: about.content }} />
+      <About content={about.content} />
     </Layout>
   )
 }

@@ -18,6 +18,7 @@
   @apply block;
 }
 
+.aboutContent p,
 .projectContent p,
 .projectContent ul,
 .jobContent p,
