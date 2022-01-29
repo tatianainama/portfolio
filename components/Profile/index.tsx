@@ -14,8 +14,8 @@ const Profile: FC = () => (
       className={styles.profilePicture}
       src={profile}
       alt="Tatiana Inama profile picture"
-      width={50}
-      height={50}
+      width={64}
+      height={64}
     />
     <div>
       <h1 className={styles.profileTitle}>Tatiana Inama</h1>
@@ -28,7 +28,7 @@ const Profile: FC = () => (
               rel="noreferrer"
               title="Github"
             >
-              <Github size={14} />
+              <Github size={16} />
             </a>
           </li>
           <li>
@@ -38,13 +38,13 @@ const Profile: FC = () => (
               rel="noreferrer"
               title="Instagram"
             >
-              <Instagram size={14} />
+              <Instagram size={16} />
             </a>
           </li>
           <li>
             <Link href="/">
               <a title="Website">
-                <Globe size={14} />
+                <Globe size={16} />
               </a>
             </Link>
           </li>

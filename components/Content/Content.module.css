@@ -18,12 +18,25 @@
   @apply block;
 }
 
-.aboutContent p,
-.projectContent p,
+.contentContainer h3,
+.contentContainer h4 {
+  @apply mt-2;
+}
+
+.aboutContent p + p,
+.projectContent p + p,
 .projectContent ul,
-.jobContent p,
-.jobContent ul {
+.projectContent li,
+.jobContent p + p,
+.jobContent ul,
+.jobContent li {
   @apply my-2;
+}
+
+.projectContent li::before,
+.jobContent li::before {
+  @apply text-new-york-pink mr-1 inline;
+  content: '•';
 }
 
 .projectContent a,

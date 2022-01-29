@@ -36,6 +36,14 @@ const Layout: FC<Layout> = ({
         <div className={styles.headerContent}>
           <Profile />
         </div>
+        <ul className={styles.headerBio}>
+          <li>Breakfast devotee</li>
+          <li>Espresso aficionado</li>
+          <li>
+            Mother of foxes <i>terrier</i>
+          </li>
+          <li>Master of some</li>
+        </ul>
       </header>
 
       <main className={styles.main}>

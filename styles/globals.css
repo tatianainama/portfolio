@@ -38,7 +38,7 @@
 
 html,
 body {
-  @apply p-0 m-0 lg:h-full lg:flex lg:flex-col lg:justify-center font-inter;
+  @apply p-0 m-0 lg:h-full lg:flex lg:flex-col lg:justify-center font-inter selection:bg-new-york-pink selection:bg-opacity-30 selection:text-black;
   background-image: linear-gradient(
     to right,
     #fcfbf2,
