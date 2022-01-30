@@ -6,6 +6,7 @@ jobTitle: Frontend Developer
 from: 2020-04
 to: 2020-10
 tags: ['React', 'PaperJS']
+resume: Voices of Merseyside is a project for a graduate thesis research that explores the accents, dialects and identities of people of the Merseyside region. I developed the multipli-platform survey that allowed participants to draw shapes on a map and also the admin panel/dashboard that performed statistical analysis on surveys' data.
 ---
 
 Voices of Merseyside is a project for a graduate thesis research that explores the accents, dialects and identities of people of the Merseyside region.

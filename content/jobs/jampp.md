@@ -5,6 +5,7 @@ jobTitle: Frontend Developer
 from: 2017-08
 to: 2018-01
 tags: ['React', 'Redux', 'NodeJS']
+resume: Jampp is a demand-side platform that combines behavioral data with predictive and programmatic technology to help advertisers acquire and engage app customers. We developed a new dashboard for our AC team. We made everything, from designing wireframes, creating prototypes to develop the app alogside with core, data science and product teams.
 ---
 
 Jampp is a demand-side platform that combines behavioral data with predictive and programmatic technology to help advertisers acquire and engage app customers.

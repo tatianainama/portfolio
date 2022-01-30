@@ -6,6 +6,7 @@ jobTitle: Frontend Developer / Graphic Designer
 from: 2014-06
 to: 2020-10
 tags: ['NextJS', 'React', 'Typescript', 'Adobe Ai/Ps/XD']
+resume: ESPECIFICOS Buenos Aires is a skin care company from Argentina. I've worked with them as a Freelancer for around 4 years, doing Frontend development and graphic design projects.
 ---
 
 ESPECIFICOS Buenos Aires is a skin care company from Argentina.

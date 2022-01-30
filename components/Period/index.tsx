@@ -16,16 +16,23 @@ const MONTHS = [
   'DEC',
 ]
 
-const Period: FC<{ from: string; to?: string }> = ({ from, to }) => {
+export const parsePeriod = (from: string, to?: string) => {
   const fromDate = new Date(from)
   const toDate = to ? new Date(to) : undefined
   const dateToString = (date?: Date) =>
     date ? `${MONTHS[date.getMonth()]} ${date.getFullYear()}` : `present`
+  return {
+    from: dateToString(fromDate),
+    to: dateToString(toDate),
+  }
+}
 
+const Period: FC<{ from: string; to?: string }> = ({ from, to }) => {
+  const { from: fromDate, to: toDate } = parsePeriod(from, to)
   return (
     <p className={styles.period}>
-      <span>{dateToString(fromDate)}</span>
-      <span>{dateToString(toDate)}</span>
+      <span>{fromDate}</span>
+      <span>{toDate}</span>
     </p>
   )
 }

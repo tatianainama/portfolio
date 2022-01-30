@@ -21,6 +21,7 @@ export type JobData = {
   company: string
   website: string
   jobTitle: string
+  resume: string
   from: string
   to?: string
   tags: string[]

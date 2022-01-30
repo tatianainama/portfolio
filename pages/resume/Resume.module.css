@@ -1,0 +1,7 @@
+.resumeContainer {
+  @apply bg-white h-full min-h-screen;
+}
+
+.resume {
+  @apply mx-auto max-w-3xl;
+}
