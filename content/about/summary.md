@@ -2,9 +2,15 @@
 name: Tatiana Inama
 title: Sr. Frontend Developer
 github: github.com/tatianainama
-email: tatii.oxo@gmail.com,
+email: tatii.oxo@gmail.com
 website: tatiana.inama.dev
 instagram: instagram.com/inamatatiana
+location: The Netherlands
+loves:
+  - Breakfast devotee
+  - Espresso aficionado
+  - Mother of terriers
+  - Master of some
 ---
 
 Hey! I'm an argentinian frontend developer living in The Netherlands.

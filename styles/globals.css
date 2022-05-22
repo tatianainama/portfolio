@@ -2,76 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Inter';
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: oblique 0deg 10deg;
-  src: url('../public/fonts/Inter.var.woff2') format('woff2');
-  src: url('../public/fonts/Inter.var.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Lekton';
-  font-weight: bold;
-  src: url('../public/fonts/Lekton-Bold.ttf') format('truetype');
-  src: url('../public/fonts/Lekton-Bold.woff') format('woff');
-}
-
-:root {
-  --hd-width: 100%;
-  --container-width: 100%;
-  --bg-split: calc(var(--hd-width) + (100vw - var(--container-width)) / 2);
-}
-
-@screen lg {
-  :root {
-    --hd-width: calc(var(--container-width) * 0.35);
+@layer base {
+  html {
+    @apply text-foreground bg-background h-full selection:bg-background-light;
+    font-size: 16px;
+    font-family: monospace;
   }
-}
-
-@screen xl {
-  :root {
-    --container-width: 1280px;
+  body {
+    @apply md:flex md:justify-center md:items-center tall:h-full;
   }
-}
-
-html,
-body {
-  @apply p-0 m-0 lg:h-full lg:flex lg:flex-col lg:justify-center font-inter selection:bg-new-york-pink selection:bg-opacity-30 selection:text-black;
-  background-image: linear-gradient(
-    to right,
-    #fcfbf2,
-    #fcfbf2 var(--bg-split),
-    #fccf3d var(--bg-split)
-  );
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-p,
-ul {
-  font-size: 0.875rem;
-  line-height: 1.47;
-  letter-spacing: -0.006em;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply font-lekton;
-}
-
-h2 {
-  @apply text-black text-xl;
 }

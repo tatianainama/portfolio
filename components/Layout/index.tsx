@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { FC } from 'react'
-import Navigation from '@/components/Navigation'
 import Profile from '@/components/Profile'
 import styles from './Layout.module.css'
 
@@ -12,7 +11,7 @@ type Layout = {
 
 const Layout: FC<Layout> = ({
   title = `Tatiana Inama - Sr. Frontend Developer`,
-  description = `Hey! I'm a Sr. frontend developer, born in Argentina now based in The Netherlands. Love making websites and solving problems`,
+  description = `Hey! I'm a Sr. frontend developer, born in Argentina now based in The Netherlands. I love making websites and solving problems`,
   section = '',
   children,
 }) => {
@@ -32,26 +31,17 @@ const Layout: FC<Layout> = ({
         <meta property="og:image" content="/OG.png" />
       </Head>
 
-      <header className={styles.header}>
-        <div className={styles.headerContent}>
-          <Profile />
-        </div>
-        <ul className={styles.headerBio}>
-          <li>Breakfast devotee</li>
-          <li>Espresso aficionado</li>
-          <li>
-            Mother of foxes <i>terrier</i>
-          </li>
-          <li>Master of some</li>
-        </ul>
-      </header>
+      <div>
+        <header className="">
+          <div className=""></div>
+        </header>
 
-      <main className={styles.main}>
-        <div className={styles.mainContent}>
-          <Navigation />
-          <div className={styles.content}>{children}</div>
-        </div>
-      </main>
+        <main className="">
+          <div className="">
+            <div className="">{children}</div>
+          </div>
+        </main>
+      </div>
     </div>
   )
 }

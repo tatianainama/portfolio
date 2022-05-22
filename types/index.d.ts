@@ -15,6 +15,8 @@ export type AboutData = {
   github: string
   instagram: string
   website: string
+  location: string
+  loves: string[]
 }
 
 export type JobData = {
