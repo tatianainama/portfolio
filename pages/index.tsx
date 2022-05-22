@@ -3,6 +3,12 @@ import { AboutData, File, JobData } from '@/types/index'
 import { aboutData, jobsData } from '@/lib/files'
 
 import Head from 'next/head'
+import Profile from '@/components/Icon/Profile'
+import Briefcase from '@/components/Icon/Briefcase'
+import Pin from '@/components/Icon/Pin'
+import Git from '@/components/Icon/Git'
+import Email from '@/components/Icon/Email'
+import Heart from '@/components/Icon/Heart'
 
 type HomeProps = {
   about: File<AboutData>
@@ -44,16 +50,56 @@ const Home: NextPage<HomeProps> = ({ about, jobs }) => {
           </video>
         </div>
         <div className="p-10">
-          <ul>
+          <ul className="space-y-2">
             <li>
-              <h1 className="text-orange">{about.data.name}</h1>
+              <Profile
+                className="inline-block mr-2 mb-1 fill-orange"
+                size={12}
+              />
+              <h1 className="text-orange inline-block">{about.data.name}</h1>
             </li>
-            <li>{about.data.title}</li>
-            <li>{about.data.location}</li>
-            <li>{about.data.github}</li>
-            <li>{about.data.email}</li>
             <li>
-              <ul>
+              <Briefcase
+                className="inline-block mr-2 mb-1 fill-foreground"
+                size={12}
+              />
+              {about.data.title}
+            </li>
+            <li>
+              <Pin
+                className="inline-block mr-2 mb-1 fill-foreground"
+                size={12}
+              />
+              {about.data.location}
+            </li>
+            <li>
+              <Git
+                className="inline-block mr-2 mb-1 fill-foreground"
+                size={12}
+              />
+              <a
+                href={`https://${about.data.github}`}
+                target="_blank"
+                rel="noreferrer"
+                className="cursor-pointer"
+                title={about.data.github}
+              >
+                {about.data.github}
+              </a>
+            </li>
+            <li>
+              <Email
+                className="inline-block mr-2 mb-1 fill-foreground"
+                size={12}
+              />
+              {about.data.email}
+            </li>
+            <li>
+              <Heart
+                className="inline-block mr-2 mb-1 fill-foreground"
+                size={13}
+              />
+              <ul className="inline-block align-top">
                 {about.data.loves.map((item) => (
                   <li key={item}>{item}</li>
                 ))}

@@ -39,4 +39,5 @@ export type ProjectData = {
 export type Icon = {
   size?: number
   className?: string
+  fill?: string
 }
