@@ -11,7 +11,7 @@ type HomeProps = {
 
 const Home: NextPage<HomeProps> = ({ about, jobs }) => {
   return (
-    <div className="md:my-4 md:grid w-full mx-auto max-w-lg md:grid-cols-5 md:max-w-6xl shadow-lg">
+    <div className="md:my-4 md:grid w-full mx-auto max-w-lg md:grid-cols-5 md:max-w-7xl shadow-lg">
       <Head>
         <title>{`${about.data.name} - ${about.data.title}`}</title>
         <meta
@@ -31,16 +31,23 @@ const Home: NextPage<HomeProps> = ({ about, jobs }) => {
 
       <aside className="md:col-span-2 border-4 border-background-light md:border-r-0">
         <div className="border-b-4 border-background-light">
-          <video autoPlay loop muted>
+          <video
+            autoPlay
+            loop
+            muted
+            className="object-cover object-right h-full md:min-h-[280px]"
+          >
             <source
               src="/video/d915929b937c9d90fb0ee7077c42672e.webm"
               type="video/webm"
             />
           </video>
         </div>
-        <div className="p-8">
+        <div className="p-10">
           <ul>
-            <li>{about.data.name}</li>
+            <li>
+              <h1 className="text-orange">{about.data.name}</h1>
+            </li>
             <li>{about.data.title}</li>
             <li>{about.data.location}</li>
             <li>{about.data.github}</li>
@@ -57,10 +64,12 @@ const Home: NextPage<HomeProps> = ({ about, jobs }) => {
       </aside>
 
       <main className="md:col-span-3 border-4 border-background-light">
-        <header className="border-b-4 border-background-light p-8">
+        <header className="border-b-4 border-background-light p-10">
+          <h2 className="text-cyan">About</h2>
           <div dangerouslySetInnerHTML={{ __html: about.content }} />
         </header>
-        <div className="p-8">
+        <div className="p-10">
+          <h2 className="text-cyan">Experience</h2>
           <div className="">
             {jobs.map((job) => (
               <article key={job.id}>{job.data.company}</article>
