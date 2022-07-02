@@ -26,6 +26,9 @@ module.exports = {
           raw: '(min-height: 550px)',
         },
       },
+      gridTemplateRows: {
+        layout: 'minmax(0, auto) minmax(0, 1fr)',
+      },
     },
   },
   plugins: [],
