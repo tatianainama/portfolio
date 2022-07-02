@@ -3,6 +3,7 @@ company: Stream
 website: https://getstream.io/
 jobTitle: Sr. Frontend Developer
 from: 2020-10
+to: 2022-05
 tags: ['React', 'Gatsby', 'WP', 'Docusaurus', 'GraphQL']
 ---
 
