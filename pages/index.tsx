@@ -56,7 +56,7 @@ const Home: NextPage<HomeProps> = ({ about, jobs }) => {
       <aside className="aside md:col-span-2 bg-background p-4 md:p-10">
         <ul className="space-y-2">
           <li>
-            <Profile className="inline-block mr-2 mb-1 fill-orange" size={12} />
+            <Profile className="inline-block mr-2 mb-1 fill-orange" size={14} />
             <h1 className="text-orange inline-block">{about.data.name}</h1>
           </li>
           <li>
@@ -67,11 +67,11 @@ const Home: NextPage<HomeProps> = ({ about, jobs }) => {
             {about.data.title}
           </li>
           <li>
-            <Pin className="inline-block mr-2 mb-1 fill-foreground" size={12} />
+            <Pin className="inline-block mr-2 mb-1 fill-foreground" size={14} />
             {about.data.location}
           </li>
           <li>
-            <Git className="inline-block mr-2 mb-1 fill-foreground" size={12} />
+            <Git className="inline-block mr-2 mb-1 fill-foreground" size={14} />
             <a
               href={`https://${about.data.github}`}
               target="_blank"
@@ -85,14 +85,14 @@ const Home: NextPage<HomeProps> = ({ about, jobs }) => {
           <li>
             <Email
               className="inline-block mr-2 mb-1 fill-foreground"
-              size={12}
+              size={14}
             />
             {about.data.email}
           </li>
           <li>
             <Heart
               className="inline-block mr-2 mb-1 fill-foreground"
-              size={13}
+              size={14}
             />
             <ul className="inline-block align-top">
               {about.data.loves.map((item) => (

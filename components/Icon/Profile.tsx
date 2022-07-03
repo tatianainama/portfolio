@@ -4,8 +4,8 @@ import { FC } from 'react'
 const Profile: FC<Icon> = ({ size = 14, ...props }) => (
   <svg
     width={size}
-    height={size}
-    viewBox="0 0 14 14"
+    height={size + 1}
+    viewBox="0 0 14 15"
     fill="#FFFFFF"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
