@@ -30,19 +30,33 @@
   .layout {
     @apply grid border-4 border-background-light gap-1 w-full mx-auto max-w-lg bg-background-light shadow-lg md:my-4 md:max-w-7xl md:max-h-[90vh] md:grid-cols-5 md:grid-rows-layout;
     grid-template-areas:
-      "video video about about about"
-      "aside aside main main main"
+        "video"
+        "aside"
+        "about"
+        "main"
   }
   .video {
     grid-area: video;
   }
+
   .about {
     grid-area: about;
   }
+
   .aside {
     grid-area: aside;
   }
+
   .main {
     grid-area: main;
   }
+
+  @media (min-width: 768px) {
+    .layout {
+      grid-template-areas:
+        "video video about about about"
+        "aside aside main main main"
+    }
+  }
 }
+

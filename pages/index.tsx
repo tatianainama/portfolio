@@ -49,11 +49,11 @@ const Home: NextPage<HomeProps> = ({ about, jobs }) => {
           />
         </video>
       </div>
-      <header className="about p-10 md:col-span-3 bg-background">
+      <header className="about p-4 md:p-10 md:col-span-3 bg-background">
         <h2 className="text-cyan">About</h2>
         <div dangerouslySetInnerHTML={{ __html: about.content }} />
       </header>
-      <aside className="aside md:col-span-2 bg-background p-10">
+      <aside className="aside md:col-span-2 bg-background p-4 md:p-10">
         <ul className="space-y-2">
           <li>
             <Profile className="inline-block mr-2 mb-1 fill-orange" size={12} />
@@ -102,7 +102,7 @@ const Home: NextPage<HomeProps> = ({ about, jobs }) => {
           </li>
         </ul>
       </aside>
-      <main className="main p-10 md:col-span-3 bg-background overflow-y-scroll">
+      <main className="main p-4 md:p-10 md:col-span-3 bg-background overflow-y-scroll">
         <h2 className="text-cyan">Experience</h2>
         <div className="">
           {jobs.map((job) => (
