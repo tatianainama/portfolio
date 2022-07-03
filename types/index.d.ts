@@ -15,6 +15,8 @@ export type AboutData = {
   github: string
   instagram: string
   website: string
+  location: string
+  loves: string[]
 }
 
 export type JobData = {
@@ -37,4 +39,5 @@ export type ProjectData = {
 export type Icon = {
   size?: number
   className?: string
+  fill?: string
 }

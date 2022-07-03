@@ -8,7 +8,7 @@ to: 2020-10
 tags: ['NextJS', 'React', 'Typescript', 'Adobe Ai/Ps/XD']
 ---
 
-ESPECIFICOS Buenos Aires is a skin care company from Argentina.
+[ESPECIFICOS Buenos Aires](https://especificosba.com.ar/) is a skin care company from Argentina.
 
 I've worked with them as a Frontend Developer / Graphic Designer since 2014.
 
