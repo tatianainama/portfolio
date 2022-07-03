@@ -12,7 +12,7 @@ const JobArticle: FC<{ job: File<JobData>; className?: string }> = ({
     <article className={className}>
       <header className="text-lg">
         <h3
-          className={`flex justify-between items-center transition-opacity text-pink cursor-pointer hover:opacity-90 ${
+          className={`py-1 flex justify-between items-center transition-opacity text-pink cursor-pointer hover:opacity-90 ${
             expanded ? 'opacity-100' : 'opacity-75'
           }`}
           onClick={() => setExpand(!expanded)}
