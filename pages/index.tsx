@@ -103,10 +103,14 @@ const Home: NextPage<HomeProps> = ({ about, jobs }) => {
         </ul>
       </aside>
       <main className="main p-4 md:p-10 md:col-span-3 bg-background overflow-y-scroll">
-        <h2 className="text-cyan">Experience</h2>
+        <h2 className="text-cyan mb-4">Experience</h2>
         <div className="">
           {jobs.map((job) => (
-            <JobArticle key={job.id} job={job} />
+            <JobArticle
+              key={job.id}
+              job={job}
+              className="border-background-light border-b-4 border-dotted pb-4 mb-4 md:pb-8 md:mb-8 last:pb-0 last:mb-0 last:border-0"
+            />
           ))}
         </div>
       </main>

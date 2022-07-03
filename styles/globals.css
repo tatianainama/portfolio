@@ -49,14 +49,38 @@
 
   .main {
     grid-area: main;
+    scrollbar-color: transparent transparent;
   }
 
+  .main:hover {
+    scrollbar-color: rgba(41, 50, 63, 0.7) transparent;
+  }
+
+  .main::-webkit-scrollbar {
+    @apply w-4 mr-2;
+  }
+
+  .main::-webkit-scrollbar-thumb {
+    @apply transition-colors bg-transparent;
+    background-clip: content-box;
+    border: 5px solid transparent;
+  }
+
+  .main:hover::-webkit-scrollbar-thumb {
+    @apply rounded-full;
+    background: rgba(41, 50, 63, 0.7);
+    background-clip: content-box;
+    border: 4px solid transparent;
+  }
+  
   @media (min-width: 768px) {
     .layout {
       grid-template-areas:
         "video video about about about"
         "aside aside main main main"
     }
+
+    
   }
 }
 
