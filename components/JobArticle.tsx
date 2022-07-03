@@ -17,7 +17,14 @@ const JobArticle: FC<{ job: File<JobData>; className?: string }> = ({
           }`}
           onClick={() => setExpand(!expanded)}
         >
-          {job.data.company}
+          {job.data.company}{' '}
+          {job.data.jobTitleStatus ? (
+            <small className="ml-1 flex-1 opacity-75">
+              [{job.data.jobTitleStatus}]
+            </small>
+          ) : (
+            ''
+          )}
           <Chevron
             className={`transition-transform transform ${
               expanded ? 'rotate-0' : 'rotate-180'

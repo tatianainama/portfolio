@@ -27,6 +27,12 @@
   p {
     @apply my-4;
   }
+  a {
+    @apply underline decoration-dotted underline-offset-4 decoration-foreground-dark;
+  } 
+  a:hover {
+    @apply decoration-cyan decoration-solid;
+  }
   .layout {
     @apply grid border-4 border-background-light gap-1 w-full mx-auto max-w-lg bg-background-light shadow-lg md:my-4 md:max-w-7xl md:max-h-[90vh] md:grid-cols-5 md:grid-rows-layout;
     grid-template-areas:
@@ -79,8 +85,10 @@
         "video video about about about"
         "aside aside main main main"
     }
+  }
 
-    
+  .main section ul {
+    @apply marker:text-pink ml-4 pl-2 list-square;
   }
 }
 
