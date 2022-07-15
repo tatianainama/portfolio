@@ -43,21 +43,21 @@ const Home: NextPage<HomeProps> = ({ about, jobs }) => {
           muted
           className="object-cover object-right h-full md:min-h-[280px]"
         >
-          <source
-            src="/video/d915929b937c9d90fb0ee7077c42672e.webm"
-            type="video/webm"
-          />
+          <source src="/video/theme-light.webm" type="video/webm" />
         </video>
       </div>
       <header className="about p-4 md:p-10 md:col-span-3 bg-background">
-        <h2 className="text-cyan">About</h2>
+        <h2 className="text-secondary">About</h2>
         <div dangerouslySetInnerHTML={{ __html: about.content }} />
       </header>
       <aside className="aside md:col-span-2 bg-background p-4 md:p-10">
         <ul className="space-y-2">
           <li>
-            <Profile className="inline-block mr-2 mb-1 fill-orange" size={14} />
-            <h1 className="text-orange inline-block">{about.data.name}</h1>
+            <Profile
+              className="inline-block mr-2 mb-1 fill-tertiary"
+              size={14}
+            />
+            <h1 className="text-tertiary inline-block">{about.data.name}</h1>
           </li>
           <li>
             <Briefcase
@@ -103,13 +103,13 @@ const Home: NextPage<HomeProps> = ({ about, jobs }) => {
         </ul>
       </aside>
       <main className="main p-4 md:p-10 md:col-span-3 bg-background overflow-y-scroll">
-        <h2 className="text-cyan mb-4">Experience</h2>
+        <h2 className="text-secondary mb-4">Experience</h2>
         <div className="">
           {jobs.map((job) => (
             <JobArticle
               key={job.id}
               job={job}
-              className="border-background-light border-b-4 border-dotted pb-4 mb-4 md:pb-8 md:mb-8 last:pb-0 last:mb-0 last:border-0"
+              className="border-background-alt border-b-4 border-dotted pb-4 mb-4 md:pb-8 md:mb-8 last:pb-0 last:mb-0 last:border-0"
             />
           ))}
         </div>
