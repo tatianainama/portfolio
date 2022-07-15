@@ -10,6 +10,7 @@ import Git from '@/components/Icon/Git'
 import Email from '@/components/Icon/Email'
 import Heart from '@/components/Icon/Heart'
 import JobArticle from '@/components/JobArticle'
+import Media from '@/components/Media'
 
 type HomeProps = {
   about: File<AboutData>
@@ -36,16 +37,7 @@ const Home: NextPage<HomeProps> = ({ about, jobs }) => {
         <meta property="og:image" content="/OG.png" />
       </Head>
 
-      <div className="video md:col-span-2 bg-background">
-        <video
-          autoPlay
-          loop
-          muted
-          className="object-cover object-right h-full md:min-h-[280px]"
-        >
-          <source src="/video/theme-light.webm" type="video/webm" />
-        </video>
-      </div>
+      <Media className="video md:col-span-2 bg-background" />
       <header className="about p-4 md:p-10 md:col-span-3 bg-background">
         <h2 className="text-secondary">About</h2>
         <div dangerouslySetInnerHTML={{ __html: about.content }} />
