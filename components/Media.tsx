@@ -1,5 +1,6 @@
 import { ThemeContext } from 'context/theme'
 import { FC, useContext, useEffect, useRef } from 'react'
+import ThemeSwitch from './ThemeSwitch'
 
 type Props = {
   className?: string
@@ -24,6 +25,7 @@ const Media: FC<Props> = ({ className }) => {
       >
         <source src={`/video/theme-${theme}.webm`} type="video/webm" />
       </video>
+      <ThemeSwitch className="absolute right-2 bottom-2" />
     </div>
   )
 }

@@ -11,9 +11,11 @@ export type ThemeOptions = keyof Theme
 export const ThemeContext = createContext<{
   theme: ThemeOptions
   setTheme: (theme: ThemeOptions) => void
+  toggle: () => void
 }>({
   theme: themeOptions.light,
   setTheme: (theme: ThemeOptions) => {},
+  toggle: () => {},
 })
 
 export const ThemeProvider: FC = ({ children }) => {
@@ -42,8 +44,14 @@ export const ThemeProvider: FC = ({ children }) => {
     }
   }, [theme])
 
+  const toggle = () => {
+    setTheme(
+      theme === themeOptions.dark ? themeOptions.light : themeOptions.dark
+    )
+  }
+
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme, toggle }}>
       {children}
     </ThemeContext.Provider>
   )
