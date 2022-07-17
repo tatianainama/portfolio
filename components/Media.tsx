@@ -8,7 +8,7 @@ type Props = {
 
 const Media: FC<Props> = ({ className }) => {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const { theme } = useContext(ThemeContext)
+  const { theme, isDark } = useContext(ThemeContext)
 
   useEffect(() => {
     videoRef.current?.load()
@@ -20,7 +20,9 @@ const Media: FC<Props> = ({ className }) => {
         autoPlay
         loop
         muted
-        className="object-cover object-right h-full md:min-h-[280px]"
+        className={`object-cover ${
+          isDark ? 'object-right' : 'object-left'
+        } h-full min-h-[150px] md:min-h-[280px]`}
         ref={videoRef}
       >
         <source src={`/video/theme-${theme}.webm`} type="video/webm" />

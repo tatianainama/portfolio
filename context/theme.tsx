@@ -10,16 +10,16 @@ export type ThemeOptions = keyof Theme
 
 export const ThemeContext = createContext<{
   theme: ThemeOptions
-  setTheme: (theme: ThemeOptions) => void
+  isDark: boolean
   toggle: () => void
 }>({
   theme: themeOptions.light,
-  setTheme: (theme: ThemeOptions) => {},
+  isDark: false,
   toggle: () => {},
 })
 
 export const ThemeProvider: FC = ({ children }) => {
-  const [theme, setTheme] = useState<ThemeOptions>(themeOptions.light)
+  const [isDark, setDark] = useState<boolean>(false)
 
   useEffect(() => {
     if (
@@ -27,31 +27,33 @@ export const ThemeProvider: FC = ({ children }) => {
       (!('theme' in localStorage) &&
         window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
-      setTheme(themeOptions.dark)
+      setDark(true)
     } else {
-      setTheme(themeOptions.light)
+      setDark(false)
     }
   }, [])
 
   useEffect(() => {
     const html = document.documentElement
-    if (theme === themeOptions.light) {
-      html.classList.remove(themeOptions.dark)
-      localStorage.setItem('theme', themeOptions.light)
-    } else {
+    if (isDark) {
       html.classList.add(themeOptions.dark)
       localStorage.setItem('theme', themeOptions.dark)
+    } else {
+      html.classList.remove(themeOptions.dark)
+      localStorage.setItem('theme', themeOptions.light)
     }
-  }, [theme])
+  }, [isDark])
 
-  const toggle = () => {
-    setTheme(
-      theme === themeOptions.dark ? themeOptions.light : themeOptions.dark
-    )
-  }
+  const toggle = () => setDark(!isDark)
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme, toggle }}>
+    <ThemeContext.Provider
+      value={{
+        theme: isDark ? themeOptions.dark : themeOptions.light,
+        toggle,
+        isDark,
+      }}
+    >
       {children}
     </ThemeContext.Provider>
   )
