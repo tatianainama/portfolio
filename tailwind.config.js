@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: 'class',
   content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
   theme: {
     extend: {
@@ -10,16 +11,16 @@ module.exports = {
       },
       colors: {
         background: {
-          DEFAULT: '#212934',
-          light: '#29323F',
+          DEFAULT: 'rgb(var(--background) / <alpha-value>)',
+          alt: 'rgb(var(--background-alt) / <alpha-value>)',
         },
         foreground: {
-          DEFAULT: '#E6E6DC',
-          dark: '#6A6971',
+          DEFAULT: 'rgb(var(--foreground) / <alpha-value>)',
+          alt: 'rgb(var(--foreground-alt) / <alpha-value>)',
         },
-        orange: '#F5A221',
-        cyan: '#6FF3D9',
-        pink: '#FC83A3',
+        primary: 'rgb(var(--primary) / <alpha-value>)',
+        secondary: 'rgb(var(--secondary) / <alpha-value>)',
+        tertiary: 'rgb(var(--tertiary) / <alpha-value>)',
       },
       screens: {
         tall: {
